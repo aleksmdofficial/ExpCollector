@@ -1,0 +1,21 @@
+# /expcollector <ник игрока> <количество уровней>
+# Доступно с правом expcollector.use
+
+
+# Делает логику работы как на ванилле
+# То не получится получить 100 уровень разбив 5 бутылок по 20 уровней
+vanilla-mode: true
+
+item:
+  name: "&c[⭐] &eПузырёк опыта &6[%level% Ур.]"
+  lore:
+    - "&7Содержит: %level% Ур. опыта"
+
+fail:
+  has-not-bottle: "&cВ инвентаре нет пустой бутылки" # любое сообщение может быть пустым
+  not-enough-exp: "&cНедостаточно уровней опыта"
+  sound: ITEM_FIRECHARGE_USE # "null" чтобы не отправлять звук
+  # Список звуков https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+success:
+  message: ""
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
